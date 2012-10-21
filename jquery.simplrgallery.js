@@ -5,7 +5,7 @@
 * Copyright 2012, Sean Gofus - http://www.seangofus.com
 * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 *
-* Date: Wed June 13 1:20:00 2011 -06000
+* Date: Wed October 20 2012
 */
 (function ($) {
 	$.fn.simplrgallery = function (options) {
