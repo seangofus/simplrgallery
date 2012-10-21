@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Simplr Gallery
 An easy jQuery plugin to display a Flickr photoset as a gallery.
 
@@ -57,9 +56,3 @@ Simplr Gallery has 5 options you can configure if you would like to customize it
 
 ## Credits
 [Sean Gofus](http://www.seangofus.com) | @seangofus
-=======
-simplrgallery
-=============
-
-An easy jQuery plugin to display a Flickr photoset as a gallery.
->>>>>>> c1c2e4b6163fe4755ab22e5acc5eb9fa467773ef
