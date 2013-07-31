@@ -4,7 +4,7 @@ An easy jQuery plugin to display a Flickr photoset as a gallery.
 Simplr Gallery takes a Flickr photoset and makes a gallery to be displayed on any website.
 
 ## How Do I Use Simplr Gallery?
-Include jQuery 1.7+ and jquery.simplrgallery.js in your layout.
+Include jQuery 1.9+ and jquery.simplrgallery.js in your layout.
 
 ```javascript
 <script src="your/path/jquery.min.js" type="text/javascript"></script>
@@ -52,6 +52,7 @@ Simplr Gallery has 5 options you can configure if you would like to customize it
 ```
 
 ## Changelog
++ `v 1.1` -Updated to work with jQuery 1.9+
 + `v 1.0` -Initial Release
 
 ## Credits
