@@ -1,11 +1,11 @@
 /*global jQuery */
 /*! 
-* simplr gallery 1.0
+* simplr gallery 1.1
 *
-* Copyright 2012, Sean Gofus - http://www.seangofus.com
+* Copyright 2013, Sean Gofus - http://www.seangofus.com
 * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
 *
-* Date: Wed October 20 2012
+* Date: Tue July 30 9:18:00 2013 -06000
 */
 (function ($) {
 	$.fn.simplrgallery = function (options) {
@@ -84,7 +84,7 @@
 					}
 			});
 			
-			$('.thumbnail img',this).live('click',function(){
+			$(parent).on('click', '.thumbnail img', function(event){
 				var photoId = $(this).parent().attr('id');
 				var photoCaption = $(this).attr('title');
 				var windowW = $(window).width();
@@ -102,14 +102,19 @@
 								var height = $(this).attr('height');
 								$('#'+photoSelector).append('<img src="'+source+'" height="'+height+'" width="'+width+'" />');
 								$('#'+photoSelector+' img').css({
-									'margin-top': (windowH-height)/2,
-									'margin-left': (windowW-width)/2
+									'top': (windowH-height)/2,
+									'left': (windowW-width)/2,
+									'position': 'absolute'
 								});
 								if(settings.caption == true){
 									$('#'+photoSelector).append('<span id="photoCaption">'+photoCaption+'</span>');
+									var photoOffset = $('#'+photoSelector+' img').offset();
 									$('#photoCaption').css({
-										'margin-left': ((windowW-width)/2)+25,
-										'width': $('#'+photoSelector+' img').width()-50
+										'top': $('#'+photoSelector+' img').height()+photoOffset.top,
+										'left': ((windowW-width)/2)+25,
+										'width': $('#'+photoSelector+' img').width()-50,
+										'position': 'absolute',
+										'z-index': '12000'
 									});
 								}
 								$('#'+photoSelector).fadeIn();
@@ -120,13 +125,13 @@
 					}
 				});
 			});
-			$('#'+photoSelector).live('click',function(){
+			$(parent).on('click', '#'+photoSelector,function(){
 				$(this).fadeOut('slow', function(){
 					$(this).remove();
 					$('#shadowbox').remove();
 				});
 			});
-			$('#shadowbox').live('click',function(){
+			$('body').on('click', '#shadowbox', function(){
 				$('#'+photoSelector).remove();
 				$(this).fadeOut('slow', function(){
 					$(this).remove();
