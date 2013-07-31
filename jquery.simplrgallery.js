@@ -114,7 +114,7 @@
 										'left': ((windowW-width)/2)+25,
 										'width': $('#'+photoSelector+' img').width()-50,
 										'position': 'absolute',
-										'z-index': '12000'
+										'z-index': '9999'
 									});
 								}
 								$('#'+photoSelector).fadeIn();
