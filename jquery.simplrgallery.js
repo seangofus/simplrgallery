@@ -10,7 +10,7 @@
 (function ($) {
 	$.fn.simplrgallery = function (options) {
 		//***CHANGE THIS VALUE TO MATCH YOUR FLICKR API KEY***//
-		var apiKey = '033601cfc628820a9b9d04dfd0259dcf';
+		var apiKey = 'YOUR API KEY GOES HERE';
 		//******************************************************//
 		var photoSet;
 		var parent = $(this);
